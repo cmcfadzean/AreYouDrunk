@@ -22,21 +22,8 @@
 
     // create the controller and inject Angular's $scope
     angularApp.controller('mainController', function($scope) {
-
         // create a message to display in our view
         $scope.message = 'Everyone come and see how good I look!';
-        $scope.user = [{
-            "id": "1",
-            "first": "Jason",
-            "last": "Stathem",
-            "marketValue": "",
-            "stocks": [
-                "Dell",
-                "McDonalds",
-                "Shell Old",
-                "Apple"
-              ]
-        }, ];
     });
 
     angularApp.controller('infoController', function($scope) {
