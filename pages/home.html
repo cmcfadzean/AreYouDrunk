@@ -1,0 +1,10 @@
+<!-- home.html -->
+    <div>
+        <h1>Home Page</h1>
+
+        <p>{{ message }}</p>
+        <p>{{ user[0].first }}</p>
+        <p ng-repeat="stock in user[0].stocks">
+        	{{stock}}
+        </p>
+    </div>
