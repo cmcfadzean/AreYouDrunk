@@ -1,7 +1,10 @@
 <!-- info.html -->
 <div class="row">
-	<div class="col-md-4"></div><!--END OF COL-->
-	<div class="col-md-8">
+	<div class="col-md-3 drunk-meter">
+		<img src="resources/img/BottleOutline.png" class="bottle-outline"/>
+		<div class="meter-fill" style="height:400px;"></div><!--END OF METER RATING-->	
+	</div><!--END OF COL-->
+	<div class="col-md-8 stage">
 		<div class="row">
     		<div class="col-md-12">
     			<h1>Tell Me About Yourself</h1>
@@ -34,7 +37,7 @@
 							<input type="text" class="form-control" name="drinkerWeightInput" ng-model="drinkerWeightInput" placeholder="Weight">
 						</div><!--END OF COL-->
 					</div><!--END OF ROW-->
-					<button class="btn btn-primary-outline" type="submit" ng-click="addInfo(drinkerSexInput,drinkerAgeInput,drinkerHeightInput,drinkerWeightInput);drinkerSexInput = '';drinkerAgeInput = '';drinkerHeightInput = '';drinkerWeightInput = '';"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add Info</button>
+					<button class="btn btn-warning-outline" type="submit" ng-click="addInfo(drinkerSexInput,drinkerAgeInput,drinkerHeightInput,drinkerWeightInput);drinkerSexInput = '';drinkerAgeInput = '';drinkerHeightInput = '';drinkerWeightInput = '';"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add Info</button>
 				</form>
     		</div><!--END OF COL-->
     	</div><!--END OF ROW-->

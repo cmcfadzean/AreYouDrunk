@@ -1,7 +1,74 @@
+/****************************************************
+GENERAL STYLES
+****************************************************/
 html { 
-  	background: url(../img/Drinks.jpg) no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
+  	background: #000; 
+}
+body {
+	background: #000; 
+	height:100vh;
+}
+.container {
+	background-color: rgba(0, 0, 0, 0.5);
+	max-width: 1000px;
+	height:100vh;
+	color: #fff;
+	padding:50px;
+}
+h1 {
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+p {
+	font-size: 18px;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+/****************************************************
+BOOSTRAP 4 OVERRIDES
+****************************************************/
+.btn {
+	border:2px solid;
+	padding:15px 25px;
+	letter-spacing: 1px;
+}
+.btn-warning-outline {
+	color: #e3c06b;
+    background-color: transparent;
+    border-color: #e3c06b;
+}
+.btn-warning-outline.btn-alt {
+    background-color: rgba(227, 192, 107, 0.3);
+}
+/****************************************************
+DRUNK METER
+****************************************************/
+.drunk-meter {
+	padding: 50px;
+	position: relative;
+	height: 550px;
+}
+.drunk-meter .meter-fill {
+	background: #e3c06b;
+	height:0px;
+	width:125px;
+	bottom: 0;
+	display: block;
+	position: absolute;
+	-webkit-transition: all 1.2s ease-in-out;
+	-moz-transition: all 1.2s ease-in-out;
+	-o-transition: all 1.2s ease-in-out;
+	transition: all 1.2s ease-in-out;
+}
+.drunk-meter img.bottle-outline {
+	height: 500px;
+	position: absolute;
+	z-index: 100;
+}
+
+/****************************************************
+STAGE
+****************************************************/
+.stage {
+	padding: 50px;
 }

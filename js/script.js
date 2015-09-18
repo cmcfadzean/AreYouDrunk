@@ -15,7 +15,7 @@
 	    	//Route for About page
 	    	.when('/info', {
 	    		templateUrl : 'pages/info.html',
-	    		controller  : 'aboutController'
+	    		controller  : 'infoController'
 	    	})
 
     });
@@ -23,9 +23,14 @@
     // create the controller and inject Angular's $scope
     angularApp.controller('mainController', function($scope) {
         // create a message to display in our view
-        $scope.message = 'Everyone come and see how good I look!';
+        $scope.message = 'Lets find out if you have had enough drinks tonight to make yourself drunk. Click the link below to get started.';
+        
+        $('.meter-fill').height('420px');
+        
     });
 
     angularApp.controller('infoController', function($scope) {
-    	$scope.message = 'This is the Info page.';
-    });
+    	$scope.message = 'This information will help us gage how drunk you are.';
+    	
+    	$('.meter-fill').height('0px');
+    });	
