@@ -1,6 +1,42 @@
-<!-- about.html -->
-    <div>
-        <h1>Info Page</h1>
-
-        <p>{{ message }}</p>
-    </div>
+<!-- info.html -->
+<div class="row">
+	<div class="col-md-4"></div><!--END OF COL-->
+	<div class="col-md-8">
+		<div class="row">
+    		<div class="col-md-12">
+    			<h1>Tell Me About Yourself</h1>
+    		</div><!--END OF COL-->
+    	</div><!--END OF ROW-->
+    	<div class="row">
+    		<div class="col-md-12">
+    			<p>{{ message }}</p>
+    		</div><!--END OF COL-->
+    	</div><!--END OF ROW-->
+        <div class="row">
+    		<div class="col-md-12">
+    			<form name="newInfoForm" id="newInfoForm">
+					<div class="row">
+						<div class="col-sm-6">
+							<select class="form-control" name="drinkerSexInput" ng-model="drinkerSexInput">
+								<option>M</option>
+								<option>F</option>
+							</select>
+						</div><!--END OF COL-->
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="drinkerAgeInput" ng-model="drinkerAgeInput" placeholder="Age">
+						</div><!--END OF COL-->
+					</div><!--END OF ROW-->
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="drinkerHeightInput" ng-model="drinkerHeightInput" placeholder="Height">
+						</div><!--END OF COL-->
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="drinkerWeightInput" ng-model="drinkerWeightInput" placeholder="Weight">
+						</div><!--END OF COL-->
+					</div><!--END OF ROW-->
+					<button class="btn btn-primary-outline" type="submit" ng-click="addInfo(drinkerSexInput,drinkerAgeInput,drinkerHeightInput,drinkerWeightInput);drinkerSexInput = '';drinkerAgeInput = '';drinkerHeightInput = '';drinkerWeightInput = '';"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add Info</button>
+				</form>
+    		</div><!--END OF COL-->
+    	</div><!--END OF ROW-->
+	</div><!--END OF COL-->
+</div><!--END OF ROW-->
