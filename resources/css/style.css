@@ -37,8 +37,38 @@ BOOSTRAP 4 OVERRIDES
     background-color: transparent;
     border-color: #e3c06b;
 }
+.btn-warning-outline.active, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline:focus, .btn-warning-outline:hover, .open>.btn-warning-outline.dropdown-toggle {
+	border-color: #e3c06b;
+	background: #e3c06b;
+}
 .btn-warning-outline.btn-alt {
     background-color: rgba(227, 192, 107, 0.3);
+}
+.btn-group {
+	width: 100%;
+}
+.btn-group .btn {
+	width: 33.33%;
+	margin-bottom:30px;
+}
+.form-control {
+	height:55px;
+	background: #000;
+	border:2px solid #e3c06b;
+	color: #e3c06b;
+	margin-bottom: 30px;
+}
+.form-control::-webkit-input-placeholder {
+   color: #69614d;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: #69614d;  
+}
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: #69614d;  
+}
+.form-control:-ms-input-placeholder {  
+   color: #69614d;  
 }
 /****************************************************
 DRUNK METER

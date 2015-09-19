@@ -32,5 +32,14 @@
     angularApp.controller('infoController', function($scope) {
     	$scope.message = 'This information will help us gage how drunk you are.';
     	
-    	$('.meter-fill').height('0px');
+    	$('.meter-fill').height('70px');
+    	
+    	$scope.addInfo = function (drinkerNameInput,drinkerSexInput,drinkerAgeInput,drinkerHeightInput,drinkerWeightInput,drinkerDrinkInput) {
+	        $scope.Name = drinkerNameInput;
+	        $scope.Sex = drinkerSexInput;
+	        $scope.Age = drinkerAgeInput;
+	        $scope.Height = drinkerHeightInput;
+	        $scope.Weight = drinkerWeightInput;
+	        $scope.Drink = drinkerDrinkInput;
+	    };
     });	

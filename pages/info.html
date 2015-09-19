@@ -13,11 +13,17 @@
     	<div class="row">
     		<div class="col-md-12">
     			<p>{{ message }}</p>
+    			<p>{{ Drink }}</p>
     		</div><!--END OF COL-->
     	</div><!--END OF ROW-->
         <div class="row">
     		<div class="col-md-12">
     			<form name="newInfoForm" id="newInfoForm">
+					<div class="row">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" name="drinkerNameInput" ng-model="drinkerNameInput" placeholder="Name">
+						</div><!--END OF COL-->
+					</div><!--END OF ROW-->
 					<div class="row">
 						<div class="col-sm-6">
 							<select class="form-control" name="drinkerSexInput" ng-model="drinkerSexInput">
@@ -37,7 +43,22 @@
 							<input type="text" class="form-control" name="drinkerWeightInput" ng-model="drinkerWeightInput" placeholder="Weight">
 						</div><!--END OF COL-->
 					</div><!--END OF ROW-->
-					<button class="btn btn-warning-outline" type="submit" ng-click="addInfo(drinkerSexInput,drinkerAgeInput,drinkerHeightInput,drinkerWeightInput);drinkerSexInput = '';drinkerAgeInput = '';drinkerHeightInput = '';drinkerWeightInput = '';"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add Info</button>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-warning-outline active">
+									<input type="radio" name="drinkerDrinkInput" ng-model="drinkerDrinkInput" value="beer" checked> Beer
+								</label>
+								<label class="btn btn-warning-outline">
+									<input type="radio" name="drinkerDrinkInput" ng-model="drinkerDrinkInput" value="wine"> Wine
+								</label>
+								<label class="btn btn-warning-outline">
+									<input type="radio" name="drinkerDrinkInput" ng-model="drinkerDrinkInput" value="liquor"> liquor
+								</label>
+							</div><!--END OF BTN GROUP-->
+						</div><!--END OF COL-->
+					</div><!--END OF ROW-->
+					<button class="btn btn-warning-outline" type="submit" ng-click="addInfo(drinkerNameInput,drinkerSexInput,drinkerAgeInput,drinkerHeightInput,drinkerWeightInput,drinkerDrinkInput);drinkerNameInput = '';drinkerSexInput = '';drinkerAgeInput = '';drinkerHeightInput = '';drinkerWeightInput = '';drinkerDrinkInput = '';"><i class="glyphicon glyphicon-plus"></i>&nbsp;Start Drinking</button>
 				</form>
     		</div><!--END OF COL-->
     	</div><!--END OF ROW-->
