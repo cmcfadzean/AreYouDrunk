@@ -25,6 +25,17 @@
 	    	})
 
     });
+    
+    angularApp.filter('setDecimal', function ($filter) {
+	    return function (input, places) {
+	        if (isNaN(input)) return input;
+	        // If we want 1 decimal place, we want to mult/div by 10
+	        // If we want 2 decimal places, we want to mult/div by 100, etc
+	        // So use the following to create that factor
+	        var factor = "1" + Array(+(places > 0 && places + 1)).join("0");
+	        return Math.round(input * factor) / factor;
+	    };
+	});
 
     // create the controller and inject Angular's $scope
     angularApp.controller('mainController', function($scope) {
@@ -59,9 +70,8 @@
     	
     	$('.meter-fill').height('15px');
     	$scope.DrinkCount = 0;
-    	$scope.AlcoholDoseBeer = 12 * .05 * 0.789;
     	$scope.WeightNumber = parseInt($rootScope.Weight);
-    	$scope.WeightInGrams = $scope.WeightNumber * 453.592;
+    	$scope.WeightInGrams = $scope.WeightNumber * 454;
     	$scope.GenderConstantMale = .69;
     	$scope.GenderConstantFemaile = .55;
     	if($rootScope.Sex == 'M') {
@@ -73,9 +83,17 @@
     	$scope.addDrink = function () {
 	    	
 	    	$scope.DrinkCount += 1;
-	        $scope.AlcoholConsumed = $scope.DrinkCount * $scope.AlcoholDoseBeer;  
+	        $scope.AlcoholConsumed = $scope.DrinkCount * 14;  
 	        $scope.AlcoholContentRaw =  $scope.AlcoholConsumed / $scope.WeightWithConstant;
 	        $scope.BAC = $scope.AlcoholContentRaw * 100;
+	        $scope.PercentDrunk = $scope.BAC / .08;
+	        $scope.PercentDrunkInPx = $scope.PercentDrunk * 100 * 2;
+	        if($scope.PercentDrunkInPx < 400) {
+		        
+	        } else {
+		        $scope.PercentDrunkInPx = 500
+		    }
+	        
 	    };
     		    
     });	
