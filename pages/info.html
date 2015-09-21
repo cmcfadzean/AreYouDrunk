@@ -13,7 +13,6 @@
     	<div class="row">
     		<div class="col-md-12">
     			<p>{{ message }}</p>
-    			<p>{{ Drink }}</p>
     		</div><!--END OF COL-->
     	</div><!--END OF ROW-->
         <div class="row">
@@ -27,6 +26,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<select class="form-control" name="drinkerSexInput" ng-model="drinkerSexInput">
+								<option value="" disabled selected>Sex</option>
 								<option>M</option>
 								<option>F</option>
 							</select>
@@ -45,17 +45,12 @@
 					</div><!--END OF ROW-->
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="btn-group" data-toggle="buttons">
-								<label class="btn btn-warning-outline active">
-									<input type="radio" name="drinkerDrinkInput" ng-model="drinkerDrinkInput" value="beer" checked> Beer
-								</label>
-								<label class="btn btn-warning-outline">
-									<input type="radio" name="drinkerDrinkInput" ng-model="drinkerDrinkInput" value="wine"> Wine
-								</label>
-								<label class="btn btn-warning-outline">
-									<input type="radio" name="drinkerDrinkInput" ng-model="drinkerDrinkInput" value="liquor"> liquor
-								</label>
-							</div><!--END OF BTN GROUP-->
+							<select class="form-control" name="drinkerDrinkInput" ng-model="drinkerDrinkInput">
+								<option value="" disabled selected>Drink</option>
+								<option>Beer</option>
+								<option>Wine</option>
+								<option>Liquor</option>
+							</select>
 						</div><!--END OF COL-->
 					</div><!--END OF ROW-->
 					<button class="btn btn-warning-outline" type="submit" ng-click="addInfo(drinkerNameInput,drinkerSexInput,drinkerAgeInput,drinkerHeightInput,drinkerWeightInput,drinkerDrinkInput);drinkerNameInput = '';drinkerSexInput = '';drinkerAgeInput = '';drinkerHeightInput = '';drinkerWeightInput = '';drinkerDrinkInput = '';"><i class="glyphicon glyphicon-plus"></i>&nbsp;Start Drinking</button>

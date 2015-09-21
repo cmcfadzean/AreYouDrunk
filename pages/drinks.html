@@ -1,0 +1,26 @@
+<!-- info.html -->
+<div class="row">
+	<div class="col-md-3 drunk-meter">
+		<img src="resources/img/BottleOutline.png" class="bottle-outline"/>
+		<div class="meter-fill" style="height:50px;"></div><!--END OF METER RATING-->	
+	</div><!--END OF COL-->
+	<div class="col-md-8 stage">
+		<div class="row">
+    		<div class="col-md-12">
+    			<h1>Tell Me About Yourself</h1>
+    		</div><!--END OF COL-->
+    	</div><!--END OF ROW-->
+    	<div class="row">
+    		<div class="col-md-12">
+    			<p>{{ message }}</p>
+    		</div><!--END OF COL-->
+    	</div><!--END OF ROW-->
+        <div class="row">
+    		<div class="col-md-12">
+    			<form name="newDrinkForm" id="newDrinkForm">
+					<button class="btn btn-block btn-warning-outline" type="submit" ng-click="addDrink()"><i class="glyphicon glyphicon-plus"></i>&nbsp;Have A Drink</button>
+				</form>
+    		</div><!--END OF COL-->
+    	</div><!--END OF ROW-->
+	</div><!--END OF COL-->
+</div><!--END OF ROW-->

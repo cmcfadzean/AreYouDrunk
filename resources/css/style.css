@@ -59,16 +59,16 @@ BOOSTRAP 4 OVERRIDES
 	margin-bottom: 30px;
 }
 .form-control::-webkit-input-placeholder {
-   color: #69614d;
+   color: #e3c06b;
 }
 .form-control:-moz-placeholder { /* Firefox 18- */
-   color: #69614d;  
+   color: #e3c06b;  
 }
 .form-control::-moz-placeholder {  /* Firefox 19+ */
-   color: #69614d;  
+   color: #e3c06b;  
 }
 .form-control:-ms-input-placeholder {  
-   color: #69614d;  
+   color: #e3c06b;  
 }
 /****************************************************
 DRUNK METER
