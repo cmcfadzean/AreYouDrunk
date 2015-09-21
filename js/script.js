@@ -55,8 +55,27 @@
     });	
     
     angularApp.controller('drinksController', function($scope,$rootScope) {
-    	$scope.message = 'This information will help us figure out how drunk you are.';
+    	$scope.message = 'Everytime you have a drink hit the have a drink button below';
     	
     	$('.meter-fill').height('15px');
+    	$scope.DrinkCount = 0;
+    	$scope.AlcoholDoseBeer = 12 * .05 * 0.789;
+    	$scope.WeightNumber = parseInt($rootScope.Weight);
+    	$scope.WeightInGrams = $scope.WeightNumber * 453.592;
+    	$scope.GenderConstantMale = .69;
+    	$scope.GenderConstantFemaile = .55;
+    	if($rootScope.Sex == 'M') {
+	    	$scope.WeightWithConstant = $scope.WeightInGrams * $scope.GenderConstantMale;
+    	} else {
+	    	$scope.WeightWithConstant = $scope.WeightInGrams * $scope.GenderConstantFemaile;
+    	}
+    	
+    	$scope.addDrink = function () {
+	    	
+	    	$scope.DrinkCount += 1;
+	        $scope.AlcoholConsumed = $scope.DrinkCount * $scope.AlcoholDoseBeer;  
+	        $scope.AlcoholContentRaw =  $scope.AlcoholConsumed / $scope.WeightWithConstant;
+	        $scope.BAC = $scope.AlcoholContentRaw * 100;
+	    };
     		    
     });	
